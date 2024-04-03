@@ -15,7 +15,6 @@ int main(){
 	
 	if(modDiv == 0){
 		printf("A divisao do numero %d com o numero %d eh EXATA", n1, n2);
-		//printf("AAAAAAAAAAAEUVOUENDOIDAAAAAAAAAAAAAAAA");
 	}
 	else{
 		printf("A divisao do numero %d com o numero %d NAO eh EXATA", n1, n2);

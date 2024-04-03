@@ -2,7 +2,7 @@
 
 int main(){
 	char operation;
-	float num1, num2, result;\
+	float num1, num2, result;
 	
 	printf("Digite a operacao (+, -, *, /, %%):");
 	scanf("%c", &operation);
