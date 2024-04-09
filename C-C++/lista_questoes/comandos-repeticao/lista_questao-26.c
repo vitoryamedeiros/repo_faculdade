@@ -11,7 +11,7 @@ int main()
 	{
 		i++;
 		printf("%d + %d = %d\t", i, num, num+i);
-    	printf ("%d - %d = %d\t", i, num, i-num);
+    	printf ("%d - %d = %d\t", i, num, num-i);
         printf ("%d X %d = %d\n", i, num, num*i);
 	}
 	return 0;
