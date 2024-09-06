@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Ponto Semanal</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="time"] { width: 100%; padding: 8px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Ponto Semanal</h1>
+        <form id="pontoForm">
+            <!-- Segunda-feira -->
+            <h2>Segunda-feira</h2>
+            <div class="form-group">
+                <label for="entradaSegunda">Hora de Entrada:</label>
+                <input type="time" id="entradaSegunda">
+            </div>
+            <div class="form-group">
+                <label for="idaAlmoçoSegunda">Hora de Ida para o Almoço:</label>
+                <input type="time" id="idaAlmoçoSegunda">
+            </div>
+            <div class="form-group">
+                <label for="voltaAlmoçoSegunda">Hora de Volta do Almoço:</label>
+                <input type="time" id="voltaAlmoçoSegunda">
+            </div>
+            <div class="form-group">
+                <label for="saídaSegunda">Hora de Saída:</label>
+                <input type="time" id="saídaSegunda">
+            </div>
+            <!-- Repetir para os outros dias da semana -->
+            <!-- Terça-feira -->
+            <h2>Terça-feira</h2>
+            <div class="form-group">
+                <label for="entradaTerça">Hora de Entrada:</label>
+                <input type="time" id="entradaTerça">
+            </div>
+            <div class="form-group">
+                <label for="idaAlmoçoTerça">Hora de Ida para o Almoço:</label>
+                <input type="time" id="idaAlmoçoTerça">
+            </div>
+            <div class="form-group">
+                <label for="voltaAlmoçoTerça">Hora de Volta do Almoço:</label>
+                <input type="time" id="voltaAlmoçoTerça">
+            </div>
+            <div class="form-group">
+                <label for="saídaTerça">Hora de Saída:</label>
+                <input type="time" id="saídaTerça">
+            </div>
+            <!-- Continue para os outros dias da semana -->
+            <button type="button" onclick="calcularHorasSemanal()">Calcular Horas Trabalhadas</button>
+        </form>
+        <p id="resultado"></p>
+    </div>
+
+    <script src="ponto.js"></script>
+</body>
+</html>
