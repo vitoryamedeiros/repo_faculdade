@@ -1,67 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Ponto Semanal</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
-        input[type="time"], input[type="button"] { width: 100%; padding: 8px; }
-        button { padding: 10px 20px; font-size: 16px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Controle de Ponto</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Controle de Ponto Semanal</h1>
+  <header>
+    <h1>Sistema de Controle de Ponto</h1>
+  </header>
 
-        <div class="form-group">
-            <input type="button" value="Registrar Entrada" id="btnEntrada">
-            <input type="button" value="Registrar Saída" id="btnSaida">
-        </div>
+  <main>
 
-        <table id="tabelaPontos">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Hora</th>
-                    <th>Tipo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Linhas dinâmicas -->
-            </tbody>
-        </table>
-
-        <form id="pontoForm">
-            <!-- Segunda-feira -->
-            <h2>Segunda-feira</h2>
-            <div class="form-group">
-                <label for="entradaSegunda">Hora de Entrada:</label>
-                <input type="time" id="entradaSegunda">
-            </div>
-            <div class="form-group">
-                <label for="idaAlmoçoSegunda">Hora de Ida para o Almoço:</label>
-                <input type="time" id="idaAlmoçoSegunda">
-            </div>
-            <div class="form-group">
-                <label for="voltaAlmoçoSegunda">Hora de Volta do Almoço:</label>
-                <input type="time" id="voltaAlmoçoSegunda">
-            </div>
-            <div class="form-group">
-                <label for="saídaSegunda">Hora de Saída:</label>
-                <input type="time" id="saídaSegunda">
-            </div>
-            <!-- Repetir para os outros dias da semana -->
-            <button type="button" onclick="calcularHorasSemanal()">Calcular Horas Trabalhadas</button>
-        </form>
-        <p id="resultado"></p>
+    <div id="dia">
+        <h3>Data:</h3>
+        <div id="data">dd/mm/yyyy</div>
     </div>
+   <div class="relogio" id="relogio">
+    <h3>Hora:</h3>
+    <div class="hora" id="hora">24:00:00</div>
+   </div>
+    <section class="controle-ponto">
+      <h2>Bater Ponto</h2>
+      <button id="acessar-interface" onclick="acessarSistema()">Acessar Sistema</button>
+      
+      <div id="opcoes-ponto" class="hidden">
+        <button id="saida-almoco" onclick="baterPonto('Saída para Almoço')">Saída para Almoço</button>
+        <button id="retorno-almoco" onclick="baterPonto('Retorno do Almoço')">Retorno do Almoço</button>
+        <button id="saida" onclick="baterPonto('Saída')">Saída</button>
+      </div>
+    </section>
 
-    <script src="ponto.js"></script>
+    <section class="horas-extras">
+      <h2>Verificar Horas Extras</h2>
+      <button id="verificar-horas" onclick="verificarHorasExtras()">Verificar Horas Extras</button>
+      <div id="resultado-horas" class="hidden"></div>
+    </section>
+
+    <div id="Mostraponto" >
+        <p>Horario do ultimo registro:</p>
+        <span id="mostrapontoent"></span>
+        <span id="mostrapontosaid"></span>
+       </div>
+       <div id="horasExtras"></div>
+       <div id="aviso"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
