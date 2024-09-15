@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e7e7;
+    color: #333;
+  }
+  
+  header {
+    background-color: #8374d5;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8374d5;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #9087c6;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #resultado-horas {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
+  #dia, .relogio, .registro, #Mostraponto {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#data, #hora {
+  font-size: 1.25rem;
+  color: #7f69f8;
+  font-weight: bold;
+}
